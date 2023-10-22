@@ -17,7 +17,7 @@
 Clone this Repository in your system
 
 ```bash
-  git clone "URL"
+  git clone "https://github.com/Shwetakatore2/employee-management-sysyem.git"
 ```
 
 Ensure you have Django installed on your system. If not, you can install it using pip
