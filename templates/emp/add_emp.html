@@ -16,17 +16,28 @@
             <div class="card bg-light text-black">
               <div class="card-body">
                 <form action="/emp/add-emp/" method="POST">
-                  {% csrf_token %}
 
-                  <!--Employee Name-->
+                  <!--Employee First Name-->
                   <div class="mb-3">
-                    <label for="name">Employee Name</label>
+                    <label for="name">First Name</label>
                     <input
-                      id="name"
+                      id="first_name"
                       type="text"
                       class="form-control"
-                      placeholder="Enter Employee Name"
-                      name="emp_name"
+                      placeholder="Enter Employee First Name"
+                      name="first_name"
+                    />
+                  </div>
+
+                  <!--Employee Last Name-->
+                  <div class="mb-3">
+                    <label for="name">Last Name</label>
+                    <input
+                      id="last_name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Employee Last Name"
+                      name="last_name"
                     />
                   </div>
 
@@ -42,15 +53,30 @@
                     />
                   </div>
 
+                  <!--Employee Email-->
+                  <div class="mb-3">
+                    <label for="id">Email Address</label>
+                    <input
+                      id="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Employee Email"
+                      name="email"
+                      pattern=".+\.com"
+                    />
+                  </div>
+
                   <!--Phone Number-->
                   <div class="mb-3">
-                    <label for="phone">Phone</label>
+                    <label for="phone">Contact Number</label>
                     <input
                       id="phone"
                       type="text"
                       class="form-control"
                       placeholder="Enter Employee Phone"
                       name="emp_phone"
+                      minlength="10"
+                      maxlength="10"
                     />
                   </div>
 

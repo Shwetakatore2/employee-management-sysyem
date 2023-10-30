@@ -9,7 +9,7 @@
           crossorigin="anonymous">
   </head>
   <body>
-    {% include 'emp/navbar.html' %}
+    {% include 'emp/navbar.html' %} 
     <h1 class="text-center my-3">Employees Table</h1>
     <div class="container">
       <div class="row">
@@ -20,8 +20,10 @@
                 <thead>
                   <tr>
                     <th>S.NO.</th>
-                    <th>NAME</th>
+                    <th>FIRST NAME</th>
+                    <th>LAST NAME</th>
                     <th>ID</th>
+                    <th>EMAIL</th>
                     <th>PHONE</th>
                     <th>WORKING STATUS</th>
                     <th>DEPARTMENT</th>
@@ -33,8 +35,10 @@
                   {% for e in emps %}
                   <tr>
                     <td>{{forloop.counter}}</td>
-                    <td>{{e.name}}</td>
+                    <td>{{e.first_name}}</td>
+                    <td>{{e.last_name}}</td>
                     <td>{{e.emp_id}}</td>
+                    <td>{{e.email}}</td>
                     <td>{{e.phone}}</td>
                     <td>{{e.working}}</td>
                     <td>{{e.department}}</td>
